@@ -1,0 +1,27 @@
+#!/usr/bin/env escript
+% vim: ft=erlang
+
+main(Args) ->
+    Response = case Args of
+        [A1, A2] ->
+            case (string:to_integer(A1)) of
+                {error, no_integer} ->
+                    io:format("Must be integer: ~s~n", [A1]),
+                    error;
+                {N1, _} ->
+                    case (string:to_integer(A2)) of
+                        {error, no_integer} ->
+                            io:format("Must be integer: ~s~n", [A2]),
+                            error;
+                        {N2, _} ->
+                            test05:test01(N1, N2),
+                            io:format("ok~n", []),
+                            ok
+                    end
+            end;
+        _ ->
+            io:format("Usage: test05_run no_of_processes no_of_tasks", []),
+            error
+    end,
+    io:format("Response: ~w~n", [Response]),
+    Response.

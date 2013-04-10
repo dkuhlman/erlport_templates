@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
+<title>erlport_templates examples</title>
+<style type="text/css">
+
+/* css */
+
+body {
+  font: 90% 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: black;
+  margin: 2em;
+  padding: 2em;
+}
+
+a[href] {
+  color: #436976;
+  background-color: transparent;
+}
+
+a.toc-backref {
+  text-decoration: none;
+}
+
+h1 a[href] {
+  text-decoration: none;
+  color: #fcb100;
+  background-color: transparent;
+}
+
+a.strong {
+  font-weight: bold;
+}
+
+img {
+  margin: 0;
+  border: 0;
+}
+
+p {
+  margin: 0.5em 0 1em 0;
+  line-height: 1.5em;
+}
+p a {
+  text-decoration: underline;
+}
+p a:visited {
+  color: purple;
+  background-color: transparent;
+}
+p a:active {
+  color: red;
+  background-color: transparent;
+}
+a:hover {
+  text-decoration: none;
+}
+p img {
+  border: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #003a6b;
+  background-color: transparent;
+  font: 100% 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 0.5em;
+}
+
+h1 {
+  font-size: 160%;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #fcb100;
+}
+h2 {
+  font-size: 140%;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #aaa;
+}
+h3 {
+  font-size: 130%;
+  margin-bottom: 0.5em;
+  text-decoration: underline;
+}
+h4 {
+  font-size: 110%;
+  font-weight: bold;
+}
+h5 {
+  font-size: 100%;
+  font-weight: bold;
+}
+h6 {
+  font-size: 80%;
+  font-weight: bold;
+}
+
+ul a, ol a {
+  text-decoration: underline;
+}
+
+dt {
+  font-weight: bold;
+}
+dt a {
+  text-decoration: none;
+}
+
+dd {
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+legend {
+  background: #ffffff;
+  padding: 0.5em;
+}
+
+form {
+  margin: 0;
+}
+
+
+dl.form {
+  margin: 0;
+  padding: 1em;
+}
+
+dl.form dt {
+  width: 30%;
+  float: left;
+  margin: 0;
+  padding: 0 0.5em 0.5em 0;
+  text-align: right;
+}
+
+input {
+  font: 100% 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+  color: black;
+  background-color: white;
+  vertical-align: middle;
+}
+
+abbr, acronym, .explain {
+  color: black;
+  background-color: transparent;
+}
+
+q, blockquote {
+}
+
+code, pre {
+  font-family: monospace;
+  font-size: 1.2em;
+  display: block;
+  padding: 10px;
+  border: 1px solid #838183;
+  background-color: #eee;
+  color: #000;
+  overflow: auto;
+  margin: 0.5em 1em;
+}
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+tt.docutils {
+  background-color: #eeeeee;
+}
+
+</style>
+</head>
+<body>
+<div class="document" id="erlport-templates-examples">
+<h1 class="title">erlport_templates examples</h1>
+
+<!-- vim: set ft=rst: -->
+<div class="section" id="compile-the-example-code">
+<h1>Compile the example code</h1>
+<p>You will need to compile the .erl files to .beam.  The following
+should do that:</p>
+<pre class="literal-block">
+$ erlc *.erl
+</pre>
+</div>
+<div class="section" id="run-the-examples">
+<h1>Run the examples</h1>
+<div class="section" id="request01test-erl">
+<h2>request01test.erl</h2>
+<p>Here is an example of running test #1 inside of erl shell:</p>
+<pre class="literal-block">
+41&gt; c(requestor01test).
+{ok,requestor01test}
+42&gt; requestor01test:runclient(&quot;client01.xml&quot;).
+1. Dave Kuhlman
+2. Mona Knight
+ok
+43&gt; requestor01test:runinterest(&quot;client01.xml&quot;).
+1. birding
+2. computer_programming
+3. birding
+4. gardening
+5. volunteering
+ok
+</pre>
+</div>
+<div class="section" id="request02test-erl">
+<h2>request02test.erl</h2>
+<p>Here is an example of running test #2 inside of erl shell:</p>
+<pre class="literal-block">
+31&gt; P = requestor02test:start().
+#Port&lt;0.2383&gt;
+32&gt; requestor02test:requestnames(P, &quot;client01.xml&quot;).
+1. Dave Kuhlman
+2. Mona Knight
+ok
+33&gt; requestor02test:requestinterest(P, &quot;client01.xml&quot;).
+1. birding
+2. computer_programming
+3. birding
+4. gardening
+5. volunteering
+ok
+34&gt; requestor02test:stop(P).
+ok
+</pre>
+</div>
+<div class="section" id="request03test-erl">
+<h2>request03test.erl</h2>
+<p>To run test #3 you can use the following in the erl shell:</p>
+<pre class="literal-block">
+18&gt; c(requestor03test).
+{ok,requestor03test}
+19&gt; f(P).
+ok
+20&gt; P = requestor03test:start().
+#Port&lt;0.2375&gt;
+21&gt; requestor03test:rpc(P, {interestnames, &quot;client01.xml&quot;}).
+Interests
+----------------------
+1. birding
+2. computer_programming
+3. birding
+4. gardening
+5. volunteering
+ok
+22&gt; requestor03test:stop(P).
+ok
+</pre>
+</div>
+<div class="section" id="the-other-tests">
+<h2>The other tests</h2>
+<p>In some cases there is a runnable escript file.  For example, you
+can run the following:</p>
+<pre class="literal-block">
+$ ./test04_run
+$ ./test05_run
+$ ./test06_run
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+<a class="reference external" href="README.rst">View document source</a>.
+Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+
+</div>
+</body>
+</html>
