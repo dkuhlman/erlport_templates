@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<clients>
+    <client>
+        <name>Dave Kuhlman</name>
+        <address>3409 - 6th Ave, Sacramento, CA</address>
+        <interest>
+            <name>birding</name>
+            <description>Watching birds</description>
+        </interest>
+        <interest>
+            <name>computer_programming</name>
+            <description>Writing computer code</description>
+        </interest>
+    </client>
+    <client>
+        <name>Mona Knight</name>
+        <address>3409 - 6th Ave, Sacramento, CA</address>
+        <interest>
+            <name>birding</name>
+            <description>Watching birds</description>
+        </interest>
+        <interest>
+            <name>gardening</name>
+            <description>Growing flowers and vegetables</description>
+        </interest>
+        <interest>
+            <name>volunteering</name>
+            <description>Doing volunteer work in Yosemite</description>
+        </interest>
+    </client>
+</clients>
