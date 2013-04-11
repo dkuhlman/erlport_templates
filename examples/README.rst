@@ -5,6 +5,12 @@ erlport_templates examples
 ============================
 
 
+The example code in this directory was created using the templates
+and the behavior in the parent directory.
+
+Instructions on how to run them is below.
+
+
 Compile the example code
 ==========================
 
