@@ -81,6 +81,14 @@ Instructions
        o
        9> my_requestor:quit(P).
 
+Example code
+--------------
+
+For examples of demo applications built with the use of these
+templates, see the README and sample code in the ``examples``
+subdirectory.
+
+
 Requests
 ----------
 
